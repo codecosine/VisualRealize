@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <style type="text/css">
+    	.center{
+    		padding: 0 10%;
+    	}
+    </style>
+
+</head>
+<body>
+<div id ="charts" style="width: 1200px;">
+     <div class ="center">
+    	<label id="controls set-page">
+    		数据来源 <select id="table" name="table" onchange="change()">
+			<option value="damaihujobs">大麦户</option>
+			<option value="nmimijobs">恩秘密</option>
+			<option value="yingkeduojobs">迎客多</option>
+			<option value="shuakewangjobs">刷客网</option>
+			<option value="woodjobs">木头人</option>
+			<option value="zhuzhujobs">猪猪网</option>
+			</select>
+    	</label>
+    	<label id="controls set-price">金额区间
+    		<input type="text" id="startMoney" placeholder="下限" value="0" style="width: 35px;">
+    		<input type="text" id="endMoney" placeholder="上限" value="100" style="width: 35px;">
+			    金额跨度
+			<select id="moneyInterval">
+				 <option value="1">1</option>
+				 <option value="5">5</option>
+			     <option selected="true" value="10">10</option>
+			     <option value="20">20</option>
+			     <option value="50">50</option>
+			     <option value="100">100</option>
+			     <option value="1000">1000</option>
+			</select>
+    	</label>
+    	<label id="controls set-time">时间设置
+    		<input class="Wdate" id="startDate" value="2015-10-01" onFocus="WdatePicker({lang:'zh-cn'})">-<input class="Wdate" id="endDate" value="2015-10-20" onFocus="WdatePicker({lang:'zh-cn'})">
+    	</label>
+    	<button id="sub">提交</button>
+    	
+    </div>
+    <div id="main" style="min-height: 600px;"></div>
+
+</div><!-- charts -->
+    <script src="js/lib/My97DatePicker/WdatePicker.js"></script>
+    <script src="js/lib/dist/echarts.js"></script>
+    <script src="js/main.js"></script>
+</body>
